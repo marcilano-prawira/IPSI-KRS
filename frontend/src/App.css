@@ -1,0 +1,137 @@
+.container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+
+/* Header */
+.header { text-align: center; margin-bottom: 2rem; }
+.header h1 { font-size: 2rem; color: var(--primary-dark); }
+.header p { color: var(--muted); }
+h2 { font-size: 1.15rem; margin-bottom: 0.75rem; }
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(47, 138, 86, 0.06);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.card .table-wrap { box-shadow: none; }
+
+/* Input */
+select, input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+}
+select:focus, input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+/* Buttons */
+button {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button:hover:not(:disabled) { background: var(--primary-dark); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button.ghost { color: var(--primary-dark); background: transparent; border-color: var(--primary); }
+button.ghost:hover:not(:disabled) { background: var(--primary-soft); }
+button.secondary { color: var(--muted); background: #fff; border-color: var(--border); }
+button.secondary:hover:not(:disabled) { background: var(--bg); }
+button.danger { color: var(--danger); background: var(--danger-soft); border-color: transparent; }
+button.danger:hover:not(:disabled) { background: #f9d6d5; }
+
+/* Alert */
+.error {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  color: var(--danger);
+  background: var(--danger-soft);
+  border: 1px solid #f5c6c5;
+  border-radius: 8px;
+}
+.note {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--warning);
+  background: var(--warning-soft);
+  border-radius: 8px;
+}
+
+/* Table */
+.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: #f8fcf9; }
+td.empty { text-align: center; color: var(--muted); padding: 1.5rem; }
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+}
+.badge.draft { color: var(--muted); background: #eef2ef; }
+.badge.diajukan { color: var(--warning); background: var(--warning-soft); }
+.badge.disetujui { color: var(--primary-dark); background: var(--primary-soft); }
+.badge.ditolak { color: var(--danger); background: var(--danger-soft); }
+
+/* Helpers */
+.center { text-align: center; }
+.muted { color: var(--muted); }
+.sub { font-size: 0.8rem; color: var(--muted); }
+.detail-info {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 0.5rem 1.25rem; margin-bottom: 1rem; color: var(--muted);
+}
+.detail-info b { color: var(--text); }
+.detail-actions { display: flex; gap: 0.5rem; margin-top: 1rem; }
+
+/* Login */
+.login-wrap { max-width: 380px; margin: 0 auto; }
+.login-wrap form { display: grid; gap: 0.9rem; }
+.field label { display: block; margin-bottom: 0.25rem; font-size: 0.85rem; color: var(--muted); }
+
+/* Halaman KRS */
+.userbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1rem; align-items: start; }
+.group-title {
+  margin: 1rem 0 0.25rem;
+  font-size: 0.8rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--primary-dark);
+}
+.kelas-item {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border);
+}
+.kelas-item:last-child { border-bottom: none; }
+
+@media (max-width: 720px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
